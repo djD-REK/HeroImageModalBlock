@@ -84,7 +84,7 @@ const Block = (props) => {
             </div>
             <div className="tc" data-btn-wrap="">
               <a
-                className={css(classes.button)}
+                className={css(classes.buttonLink)}
                 href="/curbside"
                 target="_self"
               >
