@@ -5,17 +5,22 @@ import { defaultConfig } from "./configs"
 
 const Block = (props) => {
   const classes = StyleSheet.create(getStyles(props))
-  const { joinClasses, lineOneText, lineTwoText } = props
+  const { joinClasses } = props // Helper function to combine Atomic CSS with Aphrodite
+  const { image, lineOneText, lineTwoText, buttonText, buttonLink } = props
 
   return (
     <div className={joinClasses("w-100 center", css(classes.wrapper))}>
       <div className="relative">
         <div className="absolute absolute--fill w-100 h-100">
-          <img
-            className={joinClasses("dib w-100 h-100", css(classes.image))}
-            src="https://res.cloudinary.com/dyx4yhvoq/image/upload/w_1600,h_533,c_fill,f_auto,q_auto/v1587410829/5e9c790d1a20a610174acc16/btfswvu2f3uqflsnaj3e.jpg"
-            alt="Curbside"
-          />
+          {image.uriBase && (
+            <img
+              className={joinClasses("dib w-100 h-100", css(classes.image))}
+              src={image.uriBase + image.imagePath}
+              alt={image.altText}
+              width={image.width}
+              height={image.height}
+            />
+          )}
         </div>
         <div
           className={joinClasses(
@@ -30,18 +35,15 @@ const Block = (props) => {
             )}
           >
             <div>
-              <h2>NOW OFFERING CURBSIDE PICK-UP</h2>
-              <h4>DELIVERED RIGHT TO YOUR CAR</h4>
+              <h2>{lineOneText}</h2>
+              <h4>{lineTwoText}</h4>
             </div>
-            <div className={css(classes.button)}>
-              <a
-                href="/curbside"
-                target="_self"
-                className={css(classes.buttonLink)}
-              >
-                Order Curbside Pick-Up
-              </a>
-            </div>
+
+            <a href={buttonLink} className={css(classes.buttonLink)}>
+              <div className={joinClasses("pv3 ph4 dib", css(classes.button))}>
+                {buttonText}
+              </div>
+            </a>
           </div>
         </div>
       </div>

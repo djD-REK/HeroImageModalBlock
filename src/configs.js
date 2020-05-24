@@ -4,68 +4,67 @@ export const configSchema = {
   section1: {
     type: ElementPropTypes.sectionHeader,
   },
-  backgroundImage: {
-    label: "Background Image With Default",
+  image: {
+    label: "Background Image",
     type: ElementPropTypes.image,
   },
   section2: {
     type: ElementPropTypes.sectionHeader,
   },
-  backgroundColor: {
+  modalBackgroundColor: {
     label: "Background Color (Modal Box)",
     type: ElementPropTypes.color,
   },
-  backgroundOpacitySlider: {
-    label: "Background Opacity",
-    type: ElementPropTypes.slider,
+  modalTextColor: {
+    label: "Text Color (Modal Box)",
+    type: ElementPropTypes.color,
   },
-  borderRadiusSlider: {
-    label: "Border Radius (Modal Box)",
-    type: ElementPropTypes.slider,
+  buttonBackgroundColor: {
+    label: "Background Color (Button)",
+    type: ElementPropTypes.color,
+  },
+  buttonTextColor: {
+    label: "Text Color (Button)",
+    type: ElementPropTypes.color,
   },
   section3: {
     type: ElementPropTypes.sectionHeader,
   },
-  text: {
-    label: "Text Content",
+  lineOneText: {
+    label: "Line One",
+    type: ElementPropTypes.string,
+  },
+  lineTwoText: {
+    label: "Line Two",
+    type: ElementPropTypes.string,
+  },
+  buttonText: {
+    label: "Button Text",
+    type: ElementPropTypes.string,
+  },
+  buttonLink: {
+    label: "Button Link (URL)",
     type: ElementPropTypes.string,
   },
 }
 
 export const defaultConfig = {
   section1: "Background Image",
-  backgroundImage: {
+  image: {
     uriBase: "http://d21ivvgspl06jm.cloudfront.net/",
     imagePath: "element-block-assets/slideshow/slide2.jpg",
     altText: "Monument Valley",
     width: 1600,
     height: 500,
   },
-  section2: "Modal Box",
-  backgroundColor: "black",
-  backgroundOpacitySlider: {
-    labelPrefix: "",
-    labelStepSize: 5,
-    labelSuffix: "%",
-    min: 0,
-    max: 100,
-    stepSize: 10,
-    selectedValue: 40,
-    vertical: false,
-  },
-  borderRadiusSlider: {
-    labelPrefix: "",
-    labelStepSize: 1,
-    labelSuffix: "px",
-    min: 0,
-    max: 50,
-    stepSize: 5,
-    selectedValue: 10,
-    vertical: false,
-  },
-  section3: "Sale Banner Text",
-  heading: `NOW OFFERING THE BEST DISCOUNTS OF THE YEAR`,
-  text: "50% OFF SALE ITEMS",
-  buttonText: "Get The Best Deals",
-  textColor: "white",
+  section2: "Colors",
+  modalBackgroundColor: "rgba(0, 0, 0, 0.8)",
+  modalTextColor: "white",
+  buttonBackgroundColor: "rgb(20, 161, 20)",
+  buttonTextColor: "white",
+  section3: "Text",
+  lineOneText: "50% OFF SALE ITEMS",
+  lineTwoText: "NOW OFFERING THE BEST DISCOUNTS OF THE YEAR",
+  buttonText: "Shop Our Best Deals",
+  buttonLink: "/products",
 }
