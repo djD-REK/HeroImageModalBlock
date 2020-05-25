@@ -26,13 +26,13 @@ export const getStyles = (blockConfig) => {
       fontWeight: "normal",
       lineHeight: "1.5rem",
     },
-    button: {
-      backgroundColor: buttonBackgroundColor,
-      fontWeight: "bold",
-    },
     buttonLink: {
       color: buttonTextColor,
       transition: "color 0.15s ease-in 0s",
+    },
+    button: {
+      backgroundColor: buttonBackgroundColor,
+      fontWeight: "bold",
     },
   }
 }
