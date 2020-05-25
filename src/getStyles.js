@@ -19,6 +19,13 @@ export const getStyles = (blockConfig) => {
     modal: {
       backgroundColor: modalBackgroundColor,
     },
+    lineOne: {
+      fontSize: "3rem",
+    },
+    lineTwo: {
+      fontWeight: "normal",
+      lineHeight: "1.5rem",
+    },
     button: {
       backgroundColor: buttonBackgroundColor,
       fontWeight: "bold",

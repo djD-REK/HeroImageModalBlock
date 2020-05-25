@@ -35,14 +35,18 @@ const Block = (props) => {
             )}
           >
             <div>
-              <h2>{lineOneText}</h2>
-              <h4>{lineTwoText}</h4>
+              <h2 className={joinClasses("ma0", css(classes.lineOne))}>
+                {lineOneText}
+              </h2>
+              <h3 className={css(classes.lineTwo)}>{lineTwoText}</h3>
             </div>
 
             <a href={buttonLink} className={css(classes.buttonLink)}>
-              <div className={joinClasses("pv3 ph4 dib", css(classes.button))}>
+              <h4
+                className={joinClasses("pv3 ph4 dib ma0", css(classes.button))}
+              >
                 {buttonText}
-              </div>
+              </h4>
             </a>
           </div>
         </div>
