@@ -43,7 +43,7 @@ const Block = (props) => {
 
             <a href={buttonLink} className={css(classes.buttonLink)}>
               <h4
-                className={joinClasses("pv3 ph4 dib ma0", css(classes.button))}
+                className={joinClasses("ph4 pv3 dib ma0", css(classes.button))}
               >
                 {buttonText}
               </h4>
