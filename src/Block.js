@@ -30,7 +30,7 @@ const Block = (props) => {
         >
           <div
             className={joinClasses(
-              "w-80-m w-60-l center pv4 ph3 pa5-ns dib",
+              "w-80-m w-60-l center ph3 pv4 pa5-ns dib",
               css(classes.modal)
             )}
           >
